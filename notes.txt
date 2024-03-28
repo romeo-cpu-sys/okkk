@@ -1,0 +1,7 @@
+Toon Shading med Edge Detection
+Anti-aliasing
+
+Sources:
+http://www.lighthouse3d.com/tutorials/glsl-12-tutorial/toon-shader-version-ii/
+https://en.wikipedia.org/wiki/Sobel_operator
+http://blog.simonrodriguez.fr/articles/30-07-2016_implementing_fxaa.html
