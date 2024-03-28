@@ -1,0 +1,43 @@
+Display "galaxy.tif" "file" "rgba"
+
+Format 480 360 -1
+PixelSamples 1 1
+Projection "perspective" "fov" 45
+Clipping  10 1000
+Translate 0 0 200
+
+Attribute "displacementbound" "coordinatesystem" ["object"] "sphere" [150.0]
+
+WorldBegin
+
+	LightSource "ambientlight" 1 "intensity" 0.08
+	LightSource "distantlight" 1 "from" [2 4 -20] "to" [0 0 0] "intensity" 1.0
+
+	AttributeBegin
+	Color [ 1.0 1.0 1.0 ]
+
+  	Surface "stars"
+		"float globalFrequency"	0.5
+		"float starThreshold"	0.02
+		"float cloudMix"		0.8
+		"float starCloudMix"	0.3
+	
+  	Polygon "P" [ -110 -110 0 110 -110 0 110 110 0 -110 110 0]
+	AttributeEnd
+
+
+	AttributeBegin
+	Color [ 1.0 0.0 0.0 ]
+
+  	Surface "galaxy"
+		"float colorMix"		0.8
+		"float armCurve"		2
+		"float starFreq"		40
+		"float spiralSpeed"		5
+		"float spiralMod"		3.14
+		"float spiralFreq"		8
+	
+  	Polygon "P" [ -70 -70 -1 70 -70 -1 70 70 -1 -70 70 -1]
+	AttributeEnd
+
+WorldEnd
